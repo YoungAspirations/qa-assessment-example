@@ -14,8 +14,14 @@
     # What was the name of the function we have seen which changes the case of a string?  Use your CLI to access the Python documentation and get help(str).
     
     
-    def endsPy(input):
-        return ""
+import py
+
+
+def endsPy(input):
+    if str.lower(input[-2:]) == 'py':
+        return True
+    else:
+        return False
 
     
 # <QUESTION 2>
@@ -29,9 +35,11 @@
 
 # one(['apple', 'banana', 'orange', 'orange', 'apple', 'apple']) → {'apple':3, 'orange':2, 'banana':1}
 # one(['tic', 'tac', 'toe']) → {'tic':1, 'tac':1, 'toe':1}
-    
-def one(items):
-    pass
+
+   
+#def one(items):
+  
+    #pass
 
 # <QUESTION 3>
 
@@ -48,7 +56,19 @@ def one(items):
 # two(-5, 2, '/') → -2.5
 
 def two(a, b, operator):
-    pass
+    if operator == '/':
+        solution = a/b
+    elif operator == '*':
+        solution = a*b
+    elif operator == '+':
+        solution = a+b
+    elif operator == '-':
+        solution = a-b
+    else:
+        return 'error'
+    return solution
+    
+    #pass
 
 # <QUESTION 4>
 
@@ -68,7 +88,13 @@ def two(a, b, operator):
 # We can use `x ** 0.5` to get the square root of `x`
 
 def three(num):
-    pass
+    for i in range(num):
+        i += 1
+        v = num -i
+        if (v**0.5) == int():
+            return v
+
+    #pass
 
 # <QUESTION 5>
 
@@ -81,6 +107,20 @@ def three(num):
 # four(10, 50) → 10
 
 def four(a, b):
+    c = []
+    d = []
+    g = []
+    for i in range(a):
+        i+=1
+        c.append(a/i)
+    for i in range(b):
+        i+=1    
+        d.append(b/i)
+    for i in c:
+        if i in d:
+            g.append(i)
+    hcf = max(g, default = 0)
+    return hcf
     pass
 
 # <QUESTION 6>
